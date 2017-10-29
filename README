@@ -1,0 +1,57 @@
+Title: Nozama Online simulation.
+Author: Vincent Bett:
+Purpose:
+	To simulate the operations of an order processing facility for 
+	a top online retailer by tracking the life of an order.
+Acknowledgements:
+	My codeschool.
+	Brian Kipchumba.
+Files Provided:
+	OrderQueue.h
+		Header file for Ordequeue.cpp
+	OrderQueue.cpp
+		File that implements my queue to store the
+		orders
+	Packer.h
+		Header file for Packer.cpp
+	Packer.cpp
+		File that packages the orders and prints them
+		once done
+	Fetcher.h
+		header file for fetcher.cpp
+	Fetcher.cpp
+		File that retrieves the orders from
+		the incoming class
+	Parser.h
+		header file for parser.cpp
+	Parser.cpp
+		File that reads in an order
+	incomingOrders.h
+		Header file for incomingOrders.cpp
+	IncomingOrders.cpp
+		File that accepts orders from the user
+	string2Int.h
+		header file for string2int.cpp
+	string2int.cpp
+		Convert from string to an integer.
+	main.cpp
+		File that aggregates all the other files and runs the program.
+		
+Data structures Used.
+
+Linked list.
+	Used to store the incoming orders.
+queue
+	I used it to simplify the process of removing an order from the
+	front of the list.
+stack
+	Modified my queue to only remove from the front so that I could pass it 
+	to packer.
+	
+Algorithm Used.
+	For this project I have a "master clock" that runs independently.
+	the other classes then check the time and either remove an order or take
+        an order.Once the order has gone through its life cycle it is removed 
+        from the system and printed.
+TO compile type:
+        make	
